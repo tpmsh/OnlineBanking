@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  address: 127.0.0.1
+  port: 8070
+  error:
+    whitelabel:
+      enabled: false
+
+demoBank:
+  app:
+    secret: helloDarknessMyOldFriendIComeToTalkWithYouAgain
+    expires:
+      in: 604800
