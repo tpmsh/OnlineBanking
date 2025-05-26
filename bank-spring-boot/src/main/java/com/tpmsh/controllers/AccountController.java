@@ -1,8 +1,8 @@
-package com.tpmsh.BankApp.controllers;
+package com.tpmsh.controllers;
 
 
-import com.tpmsh.BankApp.helpers.GenAccountNumber;
-import com.tpmsh.BankApp.repository.AccountRepository;
+import com.tpmsh.helpers.GenAccountNumber;
+import com.tpmsh.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.tpmsh.BankApp.models.User;
+import com.tpmsh.models.User;
 
 import jakarta.servlet.http.HttpSession;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class AccountController {
         User user = (User) session.getAttribute("user");
 
         if(user == null)
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("You must login first."); // 401 Unauthorized
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("You must login first.");
 
         //TODO: GET / GENERATE ACCOUNT NUMBER:
         int setAccountNumber = GenAccountNumber.generateAccountNumber();

@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.helpers;
+package com.tpmsh.helpers;
 
 import java.util.Random;
 

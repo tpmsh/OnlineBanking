@@ -1,7 +1,7 @@
-package com.tpmsh.BankApp.controllers;
+package com.tpmsh.controllers;
 
 
-import com.tpmsh.BankApp.repository.UserRepository;
+import com.tpmsh.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,6 @@ import java.util.Map;
 @RestController
 public class IndexController {
 
-    private static final Logger log = LoggerFactory.getLogger(IndexController.class);
     @Autowired
     private UserRepository userRepository;
 

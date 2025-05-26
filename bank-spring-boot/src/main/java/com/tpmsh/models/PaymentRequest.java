@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.models;
+package com.tpmsh.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

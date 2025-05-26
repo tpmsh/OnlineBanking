@@ -1,10 +1,10 @@
-package com.tpmsh.BankApp.interceptors;
+package com.tpmsh.interceptors;
 
 
-import com.tpmsh.BankApp.exception.CustomError;
-import com.tpmsh.BankApp.helpers.authorization.JwtService;
-import com.tpmsh.BankApp.models.User;
-import com.tpmsh.BankApp.repository.UserRepository;
+import com.tpmsh.exception.CustomError;
+import com.tpmsh.helpers.authorization.JwtService;
+import com.tpmsh.models.User;
+import com.tpmsh.repository.UserRepository;
 import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -22,7 +22,6 @@ import java.io.IOException;
 @Component
 public class AppInterceptor implements HandlerInterceptor{
 
-    private static final Logger log = LoggerFactory.getLogger(AppInterceptor.class);
     public UserRepository userRepository;
 
     @Autowired

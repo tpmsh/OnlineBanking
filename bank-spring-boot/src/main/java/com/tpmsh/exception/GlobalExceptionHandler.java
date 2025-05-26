@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.exception;
+package com.tpmsh.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

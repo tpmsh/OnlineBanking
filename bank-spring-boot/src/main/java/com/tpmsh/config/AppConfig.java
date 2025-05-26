@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.config;
+package com.tpmsh.config;
 
 
 
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
-import com.tpmsh.BankApp.interceptors.AppInterceptor;
+import com.tpmsh.interceptors.AppInterceptor;
 
 
 @Configuration

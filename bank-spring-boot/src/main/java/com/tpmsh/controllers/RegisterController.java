@@ -1,10 +1,10 @@
-package com.tpmsh.BankApp.controllers;
+package com.tpmsh.controllers;
 
-import com.tpmsh.BankApp.helpers.HTML;
-import com.tpmsh.BankApp.helpers.Token;
-import com.tpmsh.BankApp.mailMessenger.MailMessenger;
-import com.tpmsh.BankApp.models.User;
-import com.tpmsh.BankApp.repository.UserRepository;
+import com.tpmsh.helpers.HTML;
+import com.tpmsh.helpers.Token;
+import com.tpmsh.mailMessenger.MailMessenger;
+import com.tpmsh.models.User;
+import com.tpmsh.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;

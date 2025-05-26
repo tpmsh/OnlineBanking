@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.config;
+package com.tpmsh.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.mail.javamail.JavaMailSenderImpl;

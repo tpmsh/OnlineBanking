@@ -1,10 +1,10 @@
-package com.tpmsh.BankApp.repository;
+package com.tpmsh.repository;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import com.tpmsh.BankApp.models.Account;
+import com.tpmsh.models.Account;
 import org.springframework.data.repository.query.Param;
 
 import jakarta.transaction.Transactional;

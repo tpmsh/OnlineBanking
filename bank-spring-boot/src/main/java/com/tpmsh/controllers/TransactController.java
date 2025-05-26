@@ -1,11 +1,11 @@
-package com.tpmsh.BankApp.controllers;
+package com.tpmsh.controllers;
 
-import com.tpmsh.BankApp.models.PaymentRequest;
-import com.tpmsh.BankApp.models.TransferRequest;
-import com.tpmsh.BankApp.models.User;
-import com.tpmsh.BankApp.repository.AccountRepository;
-import com.tpmsh.BankApp.repository.PaymentRepository;
-import com.tpmsh.BankApp.repository.TransactRepository;
+import com.tpmsh.models.PaymentRequest;
+import com.tpmsh.models.TransferRequest;
+import com.tpmsh.models.User;
+import com.tpmsh.repository.AccountRepository;
+import com.tpmsh.repository.PaymentRepository;
+import com.tpmsh.repository.TransactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -74,7 +74,7 @@ public class TransactController {
 
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Amount Deposited Successfully.");
-        response.put("accounts", accountRepository.getUserAccountsById(user_id)); // Token'i JSON yanıtının içine ekleyin
+        response.put("accounts", accountRepository.getUserAccountsById(user_id));
 
         return ResponseEntity.ok(response);
 
@@ -141,7 +141,7 @@ public class TransactController {
 
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Transfer completed successfully.");
-        response.put("accounts", accountRepository.getUserAccountsById(user_id)); // Token'i JSON yanıtının içine ekleyin
+        response.put("accounts", accountRepository.getUserAccountsById(user_id));
 
         return ResponseEntity.ok(response);
 
@@ -193,7 +193,7 @@ public class TransactController {
 
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Withdrawal Successfull!");
-        response.put("accounts", accountRepository.getUserAccountsById(user_id)); // Token'i JSON yanıtının içine ekleyin
+        response.put("accounts", accountRepository.getUserAccountsById(user_id));
 
         return ResponseEntity.ok(response);
 
@@ -255,7 +255,7 @@ public class TransactController {
 
         Map<String, Object> response = new HashMap<>();
         response.put("message", reasonCode);
-        response.put("accounts", accountRepository.getUserAccountsById(user_id)); // Token'i JSON yanıtının içine ekleyin
+        response.put("accounts", accountRepository.getUserAccountsById(user_id));
 
 
 

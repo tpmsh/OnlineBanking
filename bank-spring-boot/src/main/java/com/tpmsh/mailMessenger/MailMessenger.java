@@ -1,7 +1,7 @@
-package com.tpmsh.BankApp.mailMessenger;
+package com.tpmsh.mailMessenger;
 
 import org.springframework.mail.javamail.JavaMailSender;
-import com.tpmsh.BankApp.config.MailConfig;
+import com.tpmsh.config.MailConfig;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
 import jakarta.mail.MessagingException;
@@ -21,6 +21,6 @@ public class MailMessenger {
         htmlMessage.setSubject(subject);
         htmlMessage.setText(body, true);
         //Send Message:
-        sender.send(message);
+//        sender.send(message);
     }
 }

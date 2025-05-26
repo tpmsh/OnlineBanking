@@ -1,6 +1,6 @@
-package com.tpmsh.BankApp.controller_advisor;
+package com.tpmsh.controller_advisor;
 
-import com.tpmsh.BankApp.models.User;
+import com.tpmsh.models.User;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 public class AdvisorController {

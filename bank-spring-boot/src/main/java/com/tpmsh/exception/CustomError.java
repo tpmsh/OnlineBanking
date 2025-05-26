@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.exception;
+package com.tpmsh.exception;
 
 public class CustomError extends RuntimeException {
 

@@ -1,13 +1,13 @@
-package com.tpmsh.BankApp.controllers;
+package com.tpmsh.controllers;
 
 
-import com.tpmsh.BankApp.models.Account;
-import com.tpmsh.BankApp.models.PaymentHistory;
-import com.tpmsh.BankApp.models.TransactionHistory;
-import com.tpmsh.BankApp.models.User;
-import com.tpmsh.BankApp.repository.AccountRepository;
-import com.tpmsh.BankApp.repository.PaymentHistoryRepository;
-import com.tpmsh.BankApp.repository.TransactHistoryRepository;
+import com.tpmsh.models.Account;
+import com.tpmsh.models.PaymentHistory;
+import com.tpmsh.models.TransactionHistory;
+import com.tpmsh.models.User;
+import com.tpmsh.repository.AccountRepository;
+import com.tpmsh.repository.PaymentHistoryRepository;
+import com.tpmsh.repository.TransactHistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -50,8 +50,8 @@ public class AppController {
 
         //Set Objects:
         Map<String, Object> response = new HashMap<>();
-        response.put("userAccounts", getUserAccounts); // veya başka verileri ekleyebilirsiniz
-        response.put("totalBalance", totalAccountsBalance); // veya başka verileri ekleyebilirsiniz
+        response.put("userAccounts", getUserAccounts);
+        response.put("totalBalance", totalAccountsBalance);
         return ResponseEntity.ok(response);
 
     }
@@ -68,7 +68,7 @@ public class AppController {
         List<PaymentHistory> userPaymentHistory = paymentHistoryRepository.getPaymentsRecordsById(userId);
 
         Map<String, List> response = new HashMap<>();
-        response.put("payment_history", userPaymentHistory); // veya başka verileri ekleyebilirsiniz
+        response.put("payment_history", userPaymentHistory);
 
 
         return ResponseEntity.ok(response);
@@ -87,7 +87,7 @@ public class AppController {
         List<TransactionHistory> userTransactionHistory = transactHistoryRepository.getTransactionRecordsById(userId);
 
         Map<String, List> response = new HashMap<>();
-        response.put("transaction_history", userTransactionHistory); // veya başka verileri ekleyebilirsiniz
+        response.put("transaction_history", userTransactionHistory);
 
 
         return ResponseEntity.ok(response);
@@ -105,7 +105,7 @@ public class AppController {
         List<TransactionHistory> accountTransactionHistory = transactHistoryRepository.getTransactionRecordsByAccountId(accountId);
 
         Map<String, List> response = new HashMap<>();
-        response.put("transaction_history", accountTransactionHistory); // veya başka verileri ekleyebilirsiniz
+        response.put("transaction_history", accountTransactionHistory);
 
 
         return ResponseEntity.ok(response);

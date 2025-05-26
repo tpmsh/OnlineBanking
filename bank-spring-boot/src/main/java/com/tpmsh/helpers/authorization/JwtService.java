@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp.helpers.authorization;
+package com.tpmsh.helpers.authorization;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -19,7 +19,6 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private static final Logger log = LoggerFactory.getLogger(JwtService.class);
     @Value("${bankApp.secret}")
     private String appSecret;
 

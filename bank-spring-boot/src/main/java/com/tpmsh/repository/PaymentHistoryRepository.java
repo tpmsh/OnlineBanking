@@ -1,6 +1,6 @@
-package com.tpmsh.BankApp.repository;
+package com.tpmsh.repository;
 
-import com.tpmsh.BankApp.models.PaymentHistory;
+import com.tpmsh.models.PaymentHistory;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

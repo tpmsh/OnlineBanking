@@ -1,4 +1,4 @@
-package com.tpmsh.BankApp;
+package com.tpmsh;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.tpmsh.BankApp.repository;
+package com.tpmsh.repository;
 
-import com.tpmsh.BankApp.models.Payment;
+import com.tpmsh.models.Payment;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
