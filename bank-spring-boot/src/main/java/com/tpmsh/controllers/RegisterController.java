@@ -5,6 +5,8 @@ import com.tpmsh.helpers.Token;
 import com.tpmsh.mailMessenger.MailMessenger;
 import com.tpmsh.models.User;
 import com.tpmsh.repository.UserRepository;
+import jakarta.mail.MessagingException;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -15,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.mail.MessagingException;
-import jakarta.validation.Valid;
 import java.util.*;
 
 @RestController

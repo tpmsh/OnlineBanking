@@ -16,20 +16,18 @@ function Chart(props) {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
-    // Redux üzerinden verileri alın ve işleyin
     const processData = () => {
       const data = props.transactHistory
         .filter(
           (item) =>
             item.status !== "failed" && item.transaction_type !== "Transfer"
         )
-        .sort((a, b) => a.transaction_id - b.transaction_id) // Transaction Id'ye göre sırala
+        .sort((a, b) => a.transaction_id - b.transaction_id) 
         .map((item) => ({
           time: dateFormatter(item.created_at),
           amount: calculateTotalAmount(item),
         }))
-        .slice(-9); // Sadece son 9 veriyi al
-
+        .slice(-9); 
       setChartData(data);
     };
 

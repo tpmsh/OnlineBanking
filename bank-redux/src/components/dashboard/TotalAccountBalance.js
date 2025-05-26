@@ -18,7 +18,6 @@ function TotalAccountBalance(props) {
   useEffect(() => {
     props.actions.getTotalBalance();
 
-    // Güncel tarih
     const now = new Date();
     const formattedDate = `${now.getDate()} ${now.toLocaleString('default', { month: 'long' })}, ${now.getFullYear()}`;
     setCurrentDate(formattedDate);

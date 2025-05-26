@@ -1,11 +1,10 @@
 package com.tpmsh.mailMessenger;
 
-import org.springframework.mail.javamail.JavaMailSender;
 import com.tpmsh.config.MailConfig;
-import org.springframework.mail.javamail.MimeMessageHelper;
-
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 
 public class MailMessenger {
     public static void htmlEmailMessenger(String from, String toMail, String subject, String body) throws MessagingException {

@@ -93,13 +93,11 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function Dashboard() {
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
-  // Boş bağımlılık dizisi, sadece bir kez çalışmasını sağlar (componentDidMount benzeri)
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -111,11 +109,9 @@ export default function Dashboard() {
     try {
       const apiUrl = "http://127.0.0.1:8070/logout";
 
-      //local stroge token
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      const accessToken = userInfo.access_token; // access_token değerini al
+      const accessToken = userInfo.access_token; 
 
-      //header object
       const headers = {
         Authorization: `Bearer ${accessToken}`,
       };
@@ -131,7 +127,6 @@ export default function Dashboard() {
 
       console.log("Kullanıcı başarıyla cikis yapti:", response.data);
     } catch (error) {
-      // İstek başarısız olduğunda hata işlemlerini burada yapabilirsiniz
 
       alertify.error("Logout failed.");
       console.error("Kullanıcı cikis yaparken bir hata olustu.", error);
@@ -142,7 +137,6 @@ export default function Dashboard() {
 
   const handleSaveAccount = (accountInfo) => {
     console.log("Yeni hesap bilgileri:", accountInfo);
-    // Hesap bilgilerini işle
   };
 
   return (
@@ -156,7 +150,7 @@ export default function Dashboard() {
         >
           <Toolbar
             sx={{
-              pr: "24px", // keep right padding when drawer closed
+              pr: "24px", 
             }}
           >
             <IconButton

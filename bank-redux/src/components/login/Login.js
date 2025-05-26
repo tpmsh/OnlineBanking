@@ -34,7 +34,6 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
@@ -56,7 +55,7 @@ export default function SignInSide() {
         "http://127.0.0.1:8070/login";
       const response = await axios.post(apiUrl, jsonData, {
         headers: {
-          "Content-Type": "application/json", // JSON verisi göndermek için content type ayarı
+          "Content-Type": "application/json", 
         },
       });
 
@@ -69,7 +68,6 @@ export default function SignInSide() {
 
       console.log("Kullanıcı başarıyla giris yapti:", response.data);
     } catch (error) {
-      // İstek başarısız olduğunda hata işlemlerini burada yapabilirsiniz
       alertify.error("Login failed.")
       console.error("Kullanıcı giris yaparken bir hata olustu.", error);
     }

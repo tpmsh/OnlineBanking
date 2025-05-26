@@ -35,8 +35,6 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function SignUp() {
@@ -60,7 +58,7 @@ export default function SignUp() {
         "http://127.0.0.1:8070/register?confirm_password=" + confirmPassword;
       const response = await axios.post(apiUrl, jsonData, {
         headers: {
-          "Content-Type": "application/json", // JSON verisi göndermek için content type ayarı
+          "Content-Type": "application/json", 
         },
       });
 
@@ -70,7 +68,6 @@ export default function SignUp() {
 
       console.log("Kullanıcı başarıyla kaydedildi:", response.data);
     } catch (error) {
-      // İstek başarısız olduğunda hata işlemlerini burada yapabilirsiniz
       alertify.error("Registiration failed.")
       console.error("Kullanıcı kaydedilirken hata oluştu:", error);
     }

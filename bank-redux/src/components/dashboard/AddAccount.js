@@ -43,7 +43,7 @@ function AccountForm({ onSaveAccount, open = true, onClose, actions}) {
       const response = await axios.post(apiUrl, jsonData, {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer: " + accessToken, // JSON verisi göndermek için content type ayarı
+          Authorization: "Bearer: " + accessToken,  
         },
       });
 
@@ -51,14 +51,13 @@ function AccountForm({ onSaveAccount, open = true, onClose, actions}) {
         alertify.success("New account added.");
       }
     } catch (error) {
-      // İstek başarısız olduğunda hata 
       alertify.error("Something went wrong");
     }
 
     actions.getAccounts();
     
     onSaveAccount(accountInfo);
-    onClose(); // Yan menüyü kapat
+    onClose(); 
   };
 
   return (
@@ -72,7 +71,7 @@ function AccountForm({ onSaveAccount, open = true, onClose, actions}) {
     >
       <div
         style={{
-          width: "300px", // Yan menünün genişliğini ayarla
+          width: "300px", 
           padding: "16px",
         }}
         role="presentation"
@@ -89,11 +88,9 @@ function AccountForm({ onSaveAccount, open = true, onClose, actions}) {
           fullWidth
           margin="normal"
           onClick={(event) => {
-            // Tıklama olayını engelleme
             event.stopPropagation();
           }}
           onKeyDown={(event) => {
-            // Klavye olaylarını engelleme
             event.stopPropagation();
           }}
         />
@@ -105,11 +102,9 @@ function AccountForm({ onSaveAccount, open = true, onClose, actions}) {
           fullWidth
           margin="normal"
           onClick={(event) => {
-            // Tıklama olayını engelleme
             event.stopPropagation();
           }}
           onKeyDown={(event) => {
-            // Klavye olaylarını engellemek
             event.stopPropagation();
           }}
         />

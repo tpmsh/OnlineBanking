@@ -1,10 +1,9 @@
 package com.tpmsh.exception;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import jakarta.servlet.http.HttpServletResponse;
 
 
 @ControllerAdvice
